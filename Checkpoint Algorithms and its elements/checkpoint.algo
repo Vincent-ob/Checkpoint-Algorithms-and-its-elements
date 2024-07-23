@@ -1,0 +1,28 @@
+    lengthCounter := 0
+    wordCounter := 0
+    vowelCounter := 0
+
+    sentence := ReadSentence() 
+
+    FOR each character IN sentence DO
+
+        lengthCounter := lengthCounter + 1
+        
+        IF character = ' ' THEN
+            wordCounter := wordCounter + 1
+        END_IF
+        
+        IF character IN ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] THEN
+            vowelCounter := vowelCounter + 1
+        END_IF
+    END_FOR
+
+    IF lengthCounter > 1 THEN
+        wordCounter := wordCounter + 1
+    END_IF
+
+    PRINT "Length of the sentence: " + lengthCounter
+    PRINT "Number of words in the sentence: " + wordCounter
+    PRINT "Number of vowels in the sentence: " + vowelCounter
+
+END Algorithm
